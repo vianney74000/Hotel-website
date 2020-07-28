@@ -1,0 +1,75 @@
+/* Home */
+
+#Navbar {
+  text-align: center;
+}
+
+#Navbar .logo {
+  float: none;
+}
+
+#Navbar ul {
+  float: none;
+}
+
+#Navbar ul li {
+  float: none;
+}
+
+#Navbar ul li a{
+  padding: 5px;
+  display: block;
+  text-align: center;
+}
+
+#home_info #img_info {
+  display: none;
+}
+
+#home_info #txt_info {
+  float: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 5vh 3vw;
+  overflow: hidden;
+}
+
+#features {
+  height: 100%;
+}
+
+#features .box {
+  float: none;
+  width: 100%;
+  text-align: center;
+  padding: 2.5vh 2.5vw ;
+  line-height: 1.2em;
+  height: 100%;
+}
+
+#contact_info .contact_box {
+  float: none;
+  width: 100%;
+  text-align: center;
+  line-height: 7em;
+  border: dotted grey 1px;
+}
+
+/* about */
+
+#About_info_txt,
+#About_info_image 
+ {
+  float: none;
+  width: 100%;
+  }
+
+  #About_info_image {
+    max-width: 300px;
+    margin: 7vh auto 0 auto;
+  }
+
+  #About_info_txt h3 {
+    text-align: center;
+  }

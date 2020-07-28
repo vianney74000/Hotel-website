@@ -1,0 +1,384 @@
+      /* RESET */
+
+*{
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+      /* Main styling */
+
+html, body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+}
+
+a{
+  color:#333;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  padding-bottom: 20px;
+}
+
+p {
+  margin: 10px, 0;
+  line-height: 1.5em;
+}
+
+      /* utility */
+
+/* Container responsive  */
+.container {
+  max-width: 1600px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.text-primary {
+  color: #F7c08a;
+}
+
+.Large_h {
+  font-size: 50px;
+  padding-bottom: 40px;
+  line-height: 1.2em;
+}
+
+.lead{
+  font-size: 20px;
+  line-height: 1.7em;
+}
+
+.btn {
+  display: inline-block;
+  color: white;
+  padding: 13px 20px;
+  background: #333;
+  /* quand attribué a lien, inutile mais quand attribué a bouton, ce sera utiles */
+  border: none;
+}
+
+.light_btn {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.dark_btn {
+  background: #333;
+  color: #f4f4f4;
+}
+
+.btn:hover {
+  background-color: #444;
+  color:#f7c083 !important;
+}
+
+/* je suis obligé de mettre le détail "a" car sinon les codes posterieur qui modifient le "a" de cette section prennent le dessus en dépit du flag "important" puisque a est un élément spécial ... */
+/* puis obligé de mettre important car j'ai un autre code qui affecte le même lien en tant que lien plus bas */
+.current a {
+  background-color: #444 ;
+  color:#f7c083 !important;
+  }
+
+
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-primary {
+  background: #f7c083;
+  color: #333;
+}
+
+
+.py-4 {
+  padding: 40px 0;
+}
+
+.py-2 {
+  padding: 20px 0;
+}
+
+.py-8 {
+  padding: 80px 0;
+}
+
+.py-12 {
+  padding: 120px 0;
+}
+
+.clr {
+  clear: both;
+}
+
+
+      /* Navbar */
+
+#Navbar{
+  background: #333;
+  color: white;
+  /* montre toujours le background */
+  /* Je ne sais pas pourquoi, mais si on ne met pas, tout disparait quand je dis a Navbar de float right */
+  overflow: hidden;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+}
+#Navbar a {
+  color: white;
+}
+
+
+#Navbar .logo{
+  float: left;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  /* dans les fait surtout utile pour quand on passe en mode responsiv mais ca semble just plus logique aussi de display en block */
+  display: block;
+  
+}
+
+#Navbar .logo:hover{
+  color: #f7c083 ;
+  background-color: #444;
+}
+
+#Navbar ul {
+  float: right;
+  list-style: none;
+}
+
+#Navbar ul li {
+  float: left;
+ 
+}
+
+#Navbar ul li a{
+  padding: 20px;
+/* sinon le padding n'affecte pas la hauteur apparemment */
+/* ne marche que si dans "a" - je pense que c'est formattage par défaut link qui coince sinon */
+  display: block;
+  text-align: center;
+}
+
+
+/* showcase */
+
+#showcase {
+    /* deux '../' permet de remonter vers le fichier source, commme nécéssaire ici */
+  background: url('../img/showcase.jpg')center center/cover no-repeat;
+  min-height: 70vh;
+}
+
+#showcase .showcase-content {
+  text-align: center;
+  padding: 10vh 3vh 5vh 3vw;
+  color: #fff;
+  line-height: 1.7em;
+  overflow: hidden;
+  /* if anything goes outside of it, no scollbar */
+}
+
+#showcase .showcase-content h1 {
+  font-size: 60px;
+  line-height: 1.2em;
+  margin-bottom: 5vh;
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 5vh;
+}
+
+/* home_info */
+
+#home_info {
+  height: 550px;
+}
+
+#home_info #img_info {
+  background: url('../img/porte-entrée.PNG') no-repeat center center/cover;
+  width: 50%;
+  float: left;
+  /* si je ne mets pas ca, rien ne va display. Je pense car l'image est ajouté dans le CSS et non le HTML du coup : il considère qu'il n'y a pas de contenu, donc le contenu n'occupe pas d'espace et le background ne s'applique derrière rien */
+  height: 100%;
+}
+
+#home_info #txt_info {
+  float: right;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 7.5vh 3vw;
+  overflow: hidden;
+}
+
+#home_info #txt_info p {
+  margin-bottom: 30px;
+}
+
+/* FEATURES */
+
+#features {
+  height: 200px;
+}
+
+#features .box {
+  float: right;
+  width: 33.3%;
+  text-align: center;
+  padding: 2.5vh 2.5vw ;
+  line-height: 1.2em;
+  height: 100%;
+}
+
+#features .box i {
+  margin-bottom: 15px;
+}
+
+/* footer */
+
+.main-footer { 
+  height: 70px;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  background: #444;
+}
+
+/*j'ai float les box dans un div (features) a qui j'ai donné une taille précise, donc pas besoin de fait le ''clear:both'' pour que footer démarre après */
+
+/* About_info*/
+
+#About_info {
+  height: 100%;
+  overflow: hidden;
+}
+
+#About_info .container {
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#About_info_txt {
+  float: left;
+  width: 50%;
+  text-align: justify;
+  }
+
+#About_info_image {
+  float: right;
+  /* je n'occupe pas les 50% entier pour ne pas déformer l'image */
+  width: 30%;
+}
+
+/* le trick border radio 50% pour arrondire l'image ne marche que si je tag l'image directement c'est bizarre */
+/* je suis obligé de dire à l'image de faire 100% de son container en width sinon elle dépasse */
+#About_info_image img {  
+  width: 100%;
+  max-height : 400px;
+  border-radius: 50%;
+}
+
+/* About_testimonials */
+
+#testimonials {
+  background: url('../img/photo-famille-repas.jpeg') no-repeat center center/cover ;
+ 
+}
+
+#testimonials h3 {
+  text-align: center;
+  color: white;
+  padding-bottom: 80px;
+}
+ 
+#testimonials .testimonials-comment {
+  margin: auto;
+  width: 80%;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  padding: 20px;
+  opacity: 0.85;
+  min-height: 150px;
+}
+
+#testimonials #comment-1_picture {
+  background: url('../img/photo-profil-alcool.jpeg') -260px 250px/670px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-right: 15px;
+  float: left;  
+  ;
+}
+
+#testimonials .testimonials-comment p {
+  text-align: justify;
+  height: 100%;
+}
+
+#testimonials #comment-2_picture {
+  background: url('../img/photo-profil-covid.jpeg') center center/cover;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-right: 15px;
+  float: left;  
+}
+
+/* Contact */
+
+#Contact_form .container{
+  max-width: 1200px;
+}
+
+#Contact_form label , 
+#Contact_form button{
+  display: block;
+}
+
+#Contact_form input {
+  height: 50px;
+  width: 100%;
+  border: #ddd solid 1px;
+} 
+
+#Contact_form textarea {
+  height: 250px;
+  width: 100%;
+  border: lightgray solid 1px;
+}
+
+#Contact_form input:focus,
+#Contact_form textarea:focus {
+  border-color: #f7c083;
+  outline: none;
+}
+
+#Contact_form button {
+  Margin: 20px 0;
+}
+
+#contact_info .container{
+  max-width: 1200px;
+}
+
+#contact_info .contact_box {
+  float: left;
+  width: 33%;
+  text-align: center;
+  line-height: 7em;
+  padding: 2.5vh ;
+}
+

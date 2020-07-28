@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="L'hotel de papinou et nanou">
+  <meta name="keywords" content="hotel, vianney, trop fort, super beau">
+  <title>hotel P&N | Welcome</title>
+  <!-- lien récupéré sur "Font Awesome" pour pouvoir ensuite utiliser leurs icones -->
+  <script src="https://kit.fontawesome.com/c463a2bfc1.js" crossorigin="anonymous"></script>
+  <!-- attention, si je laisse le '/' avant 'Css'le lien ne marche plus quand je lance le site depuis pas visual studio -->
+  <link rel="stylesheet" href="Css/style.css">
+  <!-- en dessous pour appeler les media querries -->
+  <link rel="stylesheet" media="screen and (max-width: 950px)" href="Css/Mobile.css">
+</head>
+<body>
+  <header>
+    <nav id="Navbar">
+      <!-- Ce container sert a rendre un peu responssiv la barre de navigation -->
+      <div class="container">
+        <!-- on peut mettre un lien dans un H1 avec un texte -->
+        <a class="logo" href="index.html">P&N</a>
+        <ul>
+          <!-- cette classe current, sert a activer le bouton qui correspond à la page sur laquelle on est. Elle est stylée dans le css et il suffira de déplacer la class "current" vers l'élement de la liste qui correspond a la page que l'on code (ici index) -->
+          <li class="current"><a class="btn" href="index.html">Home</a></li>
+          <li><a class="btn" href="about.html">About</a></li>
+          <li><a class="btn" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="showcase">
+      <div class="container">
+        <div class="showcase-content">
+          <h1>Enjoy your stay at <span class="text-primary">Papinous & Nanou </span>resort</h3>
+            <p class="lead">S'avourez les charmes de l'établissement le plus renomé de Paray le monial, l'étape hotel sur la route du paradis...</p>
+            <a class ='btn' href="/about.html">About Our hotel</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- cette classe est optionelle, ca servira si je vais avoir d'autres sections pour lesqulles je voudrais un dark back ground -->
+  <!-- je remarque qu'on utilise pas le "main" -->
+  <Section id="home_info" class="bg-dark">
+    <div id="img_info"></div>
+    <div id="txt_info">
+      <h2><span class="text-primary">The History</span> Of Our Hotel</h2>
+      <p>Construit pierre après pierre par son gérant actuel lui même, le batiment qui héberge l'hotel fut érigé en 1544 en l'honneur de Môe, mair de la ville en cette époque, connu pour avoir décidé la création du parking  de l'église.  Initialement bâti pour l'élevage de sauterelle, ce batiment ne découvra sa vocation d'hotellerie qu'en Mai 1968 lorsqu'il fallu héberger de nombreux hippis qui organisaient dans la région l'un des plus grands festival musical de notre époque, StoneStock.
+        <br>
+      L'hotel de P&L compta parmis ses clients certaines immenses célébrités tel que Gérard Depardieu qui se serait exclamé "ils ont peut être pas de vodka mais le vin est vraiment pas dégueux par ici! "
+      </p>
+      <a class="btn light_btn" href="/about.html">Read More</a>
+    </div>
+  </Section>
+  <Section id="features">
+    <div class="box bg-light">
+      <i class="fas fa-praying-hands fa-2x"></i>
+      <h3>Ambiance Prière</h3>
+      <p>Entre laudes, mâtines, psaumes messe, prière familliales, bénédicités, débats théologiques et j'espère pour vous que c'est votre truc !</p>
+    </div>
+    <div class="box bg-primary">
+      <i class="fas fa-mug-hot fa-2x"></i>
+      <h3>Goûté inclu</h3>
+      <p>Tout les jours à 16h, c'est l'heure du goûté ! Idéal pour les ptits vieux ou les jeunes bambins.</p>
+    </div>
+    <div class="box bg-light">
+      <i class="fas fa-dumbbell fa-2x"></i>
+      <h3>Activités sportives</h3>
+      <p>Participez au tai-chi constipé  et aux deux pompes de papinou tout les matins pour être sûr de vous dépenser abondamment !</p>
+    </div>
+  </Section>
+
+  <div class="clr"></div>
+
+  <footer class="main-footer">
+    <p>Hotel BT &copy; 2019, All Rights Reserved</p>
+  </footer>
+</body>
+</html>
